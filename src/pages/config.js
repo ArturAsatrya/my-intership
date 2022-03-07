@@ -3,6 +3,7 @@ import DefaultLayouts from "../layouts/DefaultLayouts";
 import HomePage from "./HomePage";
 import About from "./About";
 import Kitchen from "./Kitchen";
+import Login from "./Login";
 
 const config = [
     {
@@ -26,7 +27,13 @@ const config = [
         exact: true,
         layout: DefaultLayouts,
     },
-
+    {
+        component: Login,
+        path: '/Login',
+        secure: false,
+        exact: true,
+        layout: DefaultLayouts,
+    },
  
 ]
 

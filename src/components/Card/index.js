@@ -19,8 +19,8 @@ const Card = ({Data}) => {
       </div>
        {
          Data?.map((item) => (
-           <div key={item.id}>
-             <img src={item.image} />
+           <div key={item.id} className="images">
+             <img src={item.image} alt="Wood" />
            </div>
          ))
        }

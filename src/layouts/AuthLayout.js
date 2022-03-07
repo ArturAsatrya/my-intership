@@ -8,14 +8,14 @@ const Data = [
     id:1,
     image:"../assets/Rectangle 15.png",
   },
-  {
-    id:2,
-    image:"",
-  },
-  {
-    id:3,
-    image:"",
-  }
+  // {
+  //   id:2,
+  //   image:"",
+  // },
+  // {
+  //   id:3,
+  //   image:"",
+  // }
 ]
 
 const AuthLayout = ({ children }) => {

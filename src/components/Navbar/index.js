@@ -9,7 +9,11 @@ const Navbar = () => {
     <div className="all">
       <img src={Kahuyq} alt="kk" className="glav" />
       <div className="menu">
-        <img src={Menu} alt="menu" />
+        <button type="button" className="btn-menu">
+          <Link to="/Menu">
+            <img src={Menu} alt="menu" />
+          </Link>
+        </button>
       </div>
       <div className="header">
         <a href="/" className="q">
@@ -17,33 +21,14 @@ const Navbar = () => {
         </a>
       </div>
       <div className="signin">
-        <Link
-        to="/Login">
+        <Link to="/Login">
           <button className="signin1">Sign in</button>
         </Link>
       </div>
       <div className="signup">
-        <button className="signup1">Sign up</button>
-      </div>
-      <div className="box">
-        <p className="text">WooDoo</p>
-      </div>
-      <div className="box1">
-        <p className="text1"> Design Studio</p>
-      </div>
-      <div className="box2">
-        <pre>
-          <p className="text2">
-            Here you can order any type of
-            <br />
-            furniture making your space beautiful,
-            <br />
-            simple but significant.
-          </p>
-        </pre>
-      </div>
-      <div className="box3">
-        <button className="button">EXPLORE</button>
+        <Link to="/Signup">
+          <button className="signup1">Sign up</button>
+        </Link>
       </div>
     </div>
   );

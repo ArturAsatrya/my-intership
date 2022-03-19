@@ -4,6 +4,8 @@ import HomePage from "./HomePage";
 import About from "./About";
 import Kitchen from "./Kitchen";
 import Login from "./Login";
+import Signup from "./Signup";
+import Menu from "./Menu";
 
 const config = [
     {
@@ -34,7 +36,20 @@ const config = [
         exact: true,
         layout: DefaultLayouts,
     },
- 
+    {
+        component: Signup,
+        path: '/Signup',
+        secure: false,
+        exact: true,
+        layout: DefaultLayouts,
+    },
+    {
+        component: Menu,
+        path: '/Menu',
+        secure: false,
+        exact: true,
+        layout: DefaultLayouts,
+    },
 ]
 
 export default config;

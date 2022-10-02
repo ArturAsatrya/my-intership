@@ -12,6 +12,8 @@ import {
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import SignInResponsive from "../SignINResponsive";
+import { CostomInput } from "./styled";
+
 
  const LogIn = () => {
      const history = useHistory()
@@ -111,7 +113,7 @@ import SignInResponsive from "../SignINResponsive";
                   width:"400px",
                   mt:"240px"
               }}>
-                  <TextField  label="Type Email" variant="filled" {...register("Email")} type="email"/>
+                  <CostomInput  label="Type Email" variant="filled" {...register("Email")} type="email"/>
               </Box>
               </Box>
               <Box sx={{
@@ -125,7 +127,7 @@ import SignInResponsive from "../SignINResponsive";
                   mt:"120px",
                   mb:MARGINS.mb2
               }}>
-                  <TextField label="Type Password" variant="filled" {...register("Password")} type="password" autoComplete="correct-passord"/>
+                  <CostomInput label="Type Password" variant="filled" {...register("Password")} type="password" autoComplete="correct-passord"/>
               </Box>
               </Box>
               <Box sx={{

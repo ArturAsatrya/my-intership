@@ -4,8 +4,11 @@ import HomePage from "./HomePage";
 import LogIn from "./LogIN";
 import About from "./About";
 import { Tools } from "./Tools";
-// import SignIN from "./SignIN";
 import Add from "./Add";  
+import SignUP from "./SignUP";
+import { ProfilePage } from "./ProfilePage";
+import Add from "./Add";
+
 
 import SignUP from "./SignUP";
 
@@ -46,6 +49,13 @@ const config = [
     layout: DefaultLayouts,
   },
   {
+
+    component: ProfilePage,
+    path: "/profile",
+    secure: false,
+    exact: true,
+    layout: DefaultLayouts,
+  }
     component: Add,
     path: "/Add",
     secure: false,

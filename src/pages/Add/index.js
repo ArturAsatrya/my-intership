@@ -85,7 +85,7 @@ const Add = () => {
         {...register("cost")}
           sx={{
             width: "500px",
-            ml: "120px",
+            ml: "121px",
             mt: "50px",
           }}
           type="number"

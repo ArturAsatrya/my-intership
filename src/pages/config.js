@@ -7,10 +7,7 @@ import { Tools } from "./Tools";
 import Add from "./Add";  
 import SignUP from "./SignUP";
 import { ProfilePage } from "./ProfilePage";
-import Add from "./Add";
 
-
-import SignUP from "./SignUP";
 
 const config = [
   {
@@ -55,7 +52,8 @@ const config = [
     secure: false,
     exact: true,
     layout: DefaultLayouts,
-  }
+  },
+  {
     component: Add,
     path: "/Add",
     secure: false,

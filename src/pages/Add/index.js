@@ -6,7 +6,7 @@ import {
   Button,
   Link,
   Tooltip,
-  Switch
+  Switch,
 } from "@mui/material";
 import React from "react";
 import {
@@ -17,8 +17,17 @@ import {
   BORDRADIUS,
 } from "../../constant/index";
 import UndoIcon from "@mui/icons-material/Undo";
+import ConstructionIcon from "@mui/icons-material/Construction";
+import {useForm} from 'react-hook-form'
 
 const Add = () => {
+
+  const {register,handleSubmit} = useForm()
+
+  const onSubmit = (data) => {
+    console.log(data);
+  }
+
   return (
     <Box>
       <Link href="/">
@@ -45,6 +54,13 @@ const Add = () => {
       >
         You can add Tools
       </Typography>
+      <Box sx={{
+        ml:"540px",
+        mt:"-34px"
+      }}>
+        <ConstructionIcon />
+      </Box>
+      <form onSubmit={handleSubmit(onSubmit)}>
       <Box
         sx={{
           width: "1200px",
@@ -56,35 +72,77 @@ const Add = () => {
         }}
       >
         <TextField
+        {...register("name")}
           sx={{
             width: "500px",
             ml: "40px",
             mt: "50px",
           }}
           variant="filled"
-          label="?????"
+          label="Name Tool"
         />
         <TextField
+        {...register("cost")}
+          sx={{
+            width: "500px",
+            ml: "120px",
+            mt: "50px",
+          }}
+          type="number"
+          variant="filled"
+          label="Cost"
+        />
+        <TextField
+        {...register("url")}
+          sx={{
+            width: "500px",
+            ml: "40px",
+            mt: "50px",
+          }}
+          variant="filled"
+          label="URL"
+        />
+        <TextField
+        {...register("description")}
           sx={{
             width: "500px",
             ml: "120px",
             mt: "50px",
           }}
           variant="filled"
-          label="?????"
+          label="Description"
         />
          <TextField
+         {...register("country")}
           sx={{
-            width: "900px",
-            ml: "40px",
-            mt: "50px",
+            width: "500px",
+            ml: "-500px",
+            mt: "150px",
           }}
           variant="filled"
-          label="URL"
-          
+          label="Country"
         />
-        {/* <Switch  defaultChecked /> */}
+         <Tooltip title="Add Tools">
+        <Button
+        type="submit"  
+         sx={{
+            ml: "200px",
+            mt: "0px",
+            width: "150px",
+            color: COLOR.yellow,
+            transition: "0.6s",
+            boxShadow: 1,
+            borderRadius:BORDRADIUS.xl,
+            "&:hover": {
+              boxShadow: 15,
+            },
+          }}
+          >
+          Add
+        </Button>
+        </Tooltip>
       </Box>
+      </form>
     </Box>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, Grid, TextField, Link } from "@mui/material";
+import { Box, Button, Grid, TextField, Link, Tooltip } from "@mui/material";
 import { ListItem } from "../../components/ListItem";
 import {
   COLOR,
@@ -170,6 +170,7 @@ const HomePage = () => {
       <Link href="/Add" sx={{
         color:"transparent"
       }}>
+        <Tooltip title="Go to Add">
         <Button
           sx={{
             ml: "100px",
@@ -186,6 +187,7 @@ const HomePage = () => {
         >
           ADD
         </Button>
+        </Tooltip>
       </Link>
       <Box
         sx={{
